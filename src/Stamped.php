@@ -15,7 +15,7 @@ class Stamped
         $api_key = $config['api_key'];
         $store = $config['store'];
 
-        $this->url = sprintf('https://stamped.io/api/widget/reviews?type=full-page-multiple&apiKey=%s&storeUrl=%s&page=1&minrating=1', $api_key, $store);
+        $this->url = sprintf('https://stamped.io/api/widget/reviews?type=full-page-multiple&apiKey=%s&storeUrl=%s&minrating=1', $api_key, $store);
     }
     
 
@@ -57,11 +57,11 @@ class Stamped
 	    return $output;
     }
 
-    public function getProductReviews($product)
+    public function getProductReviews($product, $limit = 20, $page = 1)
     {
         $base_url = $this->url;
 	
-	    $url = $base_url . '&productid='.$product;
+	    $url = $base_url . '&productid='.$product . '&take=' . $limit . '&page=' . $page;
 	
 	    $retry = 0;
 	
