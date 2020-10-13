@@ -13,7 +13,7 @@
     "keywords": ["Laravel", "Stamped"],
     "require": {
         "ext-json": "*",
-        "illuminate/support": "^6.0",
+        "illuminate/support": "^8.0",
         "rmccue/requests": "^1.7"
     },
     "require-dev": {
